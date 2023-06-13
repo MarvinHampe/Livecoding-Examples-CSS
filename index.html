@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>CSS Examples</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+  <script src="https://kit.fontawesome.com/5fafca26c5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <input type="checkbox" id="nav-toggle-checkbox" class="nav-toggle-checkbox">
+  <label for="nav-toggle-checkbox" class="nav-toggle-label">&#9776;</label>
+  <nav class="navigation sticky-nav">
+    <ul>
+      <li id="back"><a href="#"><i class='fas fa-angle-double-left'></i>Back to the Main Website</a></li>
+    </ul>
+    <ul>
+      <li><a href="#animations">Animations</a></li>
+      <li><a href="#display">Display</a></li>
+      <li><a href="#flex">Flexible Layouts</a></li>
+      <li><a href="#grid">Grid Layouts</a></li>
+      <li><a href="#filter">Filter Effects</a></li>
+      <li><a href="#fonts">Fonts</a></li>
+      <li><a href="#images">Images</a></li>
+      <li><a href="#list">List Styles</a></li>
+      <li><a href="#media">Media Queries</a></li>
+    </ul>
+    <ul>
+      <li id="top"><a href="#"><i class='fas fa-angle-double-up'></i>Back to the Top</a></li>
+    </ul>
+  </nav>
+  <main class="container">
+    <!-- Example 1: Animations -->
+    <h1 id="animations">Animations</h1>
+
+    <!-- Example 2: Bounce Animation -->
+    <h3>Bounce Animation</h3>
+    <p>Make an element bounce on the screen:</p>
+    <div class="code-example">
+      <p><strong>Example:</strong></p>
+      <pre><code id="code-2">
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(30px); }
+  100% { transform: translateY(0); }
+}
+
+div.bounce {
+  animation: bounce 2s infinite;
+}
+</code></pre>
+      <button class="sandbox-button" onclick="toggleCodeExecution(2)">Try It</button>
+      <div id="sandbox-output-2" class="sandbox-output"></div>
+    </div>
+
+    <div id="example-2" style="display: none;">
+      <div class="example-div bounce">This is an example div with bounce animation.</div>
+    </div>
+
+    <!-- Example 3: Rotate Animation -->
+    <h3>Rotate Animation</h3>
+    <p>Rotate an element continuously:</p>
+    <div class="code-example">
+      <p><strong>Example:</strong></p>
+      <pre><code id="code-3">
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-30deg); }
+}
+
+div.rotate {
+  animation: rotate 3s linear infinite;
+}
+</code></pre>
+      <button class="sandbox-button" onclick="toggleCodeExecution(3)">Try It</button>
+      <div id="sandbox-output-3" class="sandbox-output"></div>
+    </div>
+
+    <div id="example-3" style="display: none;">
+      <div class="example-div rotate">This is an example div with rotate animation.</div>
+    </div>
+
+    <!-- Continue with more animation examples -->
+
+    <h1 id="display">Display</h1>
+
+    <h3>Display - Inline</h3>
+    <p>Create inline elements:</p>
+    <div class="code-example">
+      <p><strong>Example:</strong></p>
+      <pre><code id="code-21">
+.inline-container {
+  background-color: lightblue;
+}
+
+.inline-item {
+  display: inline;
+  padding: 10px;
+  background-color: lightgreen;
+}
+  </code></pre>
+      <button class="sandbox-button" onclick="toggleCodeExecution(21)">Try It</button>
+      <div id="sandbox-output-21" class="sandbox-output"></div>
+    </div>
+
+    <div id="example-21" style="display: none;">
+      <div class="inline-container">
+        <span class="inline-item">Item 1</span>
+        <span class="inline-item">Item 2</span>
+        <span class="inline-item">Item 3</span>
+      </div>
+    </div>
+
+    <h3>Display - Block</h3>
+    <p>Create block elements:</p>
+    <div class="code-example">
+      <p><strong>Example:</strong></p>
+      <pre><code id="code-22">
+.block-container {
+  background-color: lightblue;
+}
+
+.block-item {
+  display: block;
+  padding: 10px;
+  background-color: lightgreen;
+}
+  </code></pre>
+      <button class="sandbox-button" onclick="toggleCodeExecution(22)">Try It</button>
+      <div id="sandbox-output-22" class="sandbox-output"></div>
+    </div>
+
+    <div id="example-22" style="display: none;">
+      <div class="block-container">
+        <div class="block-item">Item 1</div>
+        <div class="block-item">Item 2</div>
+        <div class="block-item">Item 3</div>
+      </div>
+    </div>
+
+
+    <h3>Display - Flex</h3>
+    <p>Create layouts using flexbox:</p>
+    <div class="code-example">
+      <p><strong>Example:</strong></p>
+      <pre><code id="code-19">
+    .flex-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 200px;
+      background-color: lightblue;
+    }
+    
+    .flex-item {
+      padding: 10px;
+      margin: 5px;
+      background-color: lightgreen;
+    }
+      </code></pre>
+      <button class="sandbox-button" onclick="toggleCodeExecution(19)">Try It</button>
+      <div id="sandbox-output-19" class="sandbox-output"></div>
+    </div>
+
+    <div id="example-19" style="display: none;">
+      <div class="flex-container">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+      </div>
+    </div>
+
+    <h3>Display - Grid</h3>
+    <p>Create layouts using CSS grid:</p>
+    <div class="code-example">
+      <p><strong>Example:</strong></p>
+      <pre><code id="code-20">
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+      background-color: lightblue;
+    }
+    
+    .grid-item {
+      padding: 10px;
+      background-color: lightgreen;
+    }
+      </code></pre>
+      <button class="sandbox-button" onclick="toggleCodeExecution(20)">Try It</button>
+      <div id="sandbox-output-20" class="sandbox-output"></div>
+    </div>
+
+    <div id="example-20" style="display: none;">
+      <div class="grid-container">
+        <div class="grid-item">Item 1</div>
+        <div class="grid-item">Item 2</div>
+        <div class="grid-item">Item 3</div>
+      </div>
+    </div>
+
+    <h1 id="flex">Flexible Layouts</h1>
+
+
+    <h3>Align Items</h3>
+    <p>Align flex items along the cross axis:</p>
+    <div class="code-example">
+      <p><strong>Example:</strong></p>
+      <pre><code id="code-10">
+.flex-container {
+  display: flex;
+  align-items: center;
+}
+
+.flex-item {
+  width: 100px;
+  height: 100px;
+  background-color: #f0f0f0;
+  margin: 10px;
+}
+  </code></pre>
+      <button class="sandbox-button" onclick="toggleCodeExecution(10)">Try It</button>
+      <div id="sandbox-output-10" class="sandbox-output"></div>
+    </div>
+
+    <div id="example-10" style="display: none;">
+      <div class="flex-container">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+      </div>
+    </div>
+
+    <h3>Order</h3>
+    <p>Change the order of flex items:</p>
+    <div class="code-example">
+      <p><strong>Example:</strong></p>
+      <pre><code id="code-11">
+.flex-container {
+  display: flex;
+}
+
+.flex-item {
+  width: 100px;
+  height: 100px;
+  background-color: #f0f0f0;
+  margin: 10px;
+}
+
+.flex-item:nth-child(2) {
+  order: 1;
+}
+  </code></pre>
+      <button class="sandbox-button" onclick="toggleCodeExecution(11)">Try It</button>
+      <div id="sandbox-output-11" class="sandbox-output"></div>
+    </div>
+
+    <div id="example-11" style="display: none;">
+      <div class="flex-container">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+      </div>
+    </div>
+
+    <h1 id="grid">Grid Layouts</h1>
+
+    <h3>Grid Template Columns</h3>
+    <p>Specify the number and width of columns:</p>
+    <div class="code-example">
+      <p><strong>Example:</strong></p>
+      <pre><code id="code-14">
+.grid-example {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 10px;
+}
+  </code></pre>
+      <button class="sandbox-button" onclick="toggleCodeExecution(14)">Try It</button>
+      <div id="sandbox-output-14" class="sandbox-output"></div>
+    </div>
+
+    <div id="example-14" style="display: none;">
+      <div class="grid-example">
+        <div>Column 1</div>
+        <div>Column 2</div>
+        <div>Column 3</div>
+      </div>
+    </div>
+
+    <h3>Grid Template Rows</h3>
+    <p>Specify the number and height of rows:</p>
+    <div class="code-example">
+      <p><strong>Example:</strong></p>
+      <pre><code id="code-15">
+.grid-example {
+  display: grid;
+  grid-template-rows: 50px 100px 50px;
+  gap: 10px;
+}
+  </code></pre>
+      <button class="sandbox-button" onclick="toggleCodeExecution(15)">Try It</button>
+      <div id="sandbox-output-15" class="sandbox-output"></div>
+    </div>
+
+    <div id="example-15" style="display: none;">
+      <div class="grid-example">
+        <div>Row 1</div>
+        <div>Row 2</div>
+        <div>Row 3</div>
+      </div>
+    </div>
+
+    <h1 id="filter">Filter Effects</h1>
+
+    <h3>Blur Effect</h3>
+    <p>Apply a blur effect to a paragraph:</p>
+    <div class="code-example">
+      <p><strong>Example:</strong></p>
+      <pre><code id="code-7">
+    .example-paragraph {
+      filter: blur(2px);
+    }
+      </code></pre>
+      <button class="sandbox-button" onclick="toggleCodeExecution(7)">Try It</button>
+      <div id="sandbox-output-7" class="sandbox-output"></div>
+    </div>
+
+    <div id="example-7" style="display: none;">
+      <p class="example-paragraph">This is an example paragraph with a blur effect.</p>
+    </div>
+
+    <h3>Opacity</h3>
+    <p>Adjust the opacity of an element:</p>
+    <div class="code-example">
+      <p><strong>Example:</strong></p>
+      <pre><code id="code-8">
+    .example-paragraph {
+      opacity: 0.2;
+    }
+      </code></pre>
+      <button class="sandbox-button" onclick="toggleCodeExecution(8)">Try It</button>
+      <div id="sandbox-output-8" class="sandbox-output"></div>
+    </div>
+
+    <div id="example-8" style="display: none;">
+      <p class="example-paragraph">This is an example paragraph with an opacity effect.</p>
+    </div>
+
+    <h3>Saturate</h3>
+    <p>Adjust the saturation of an element:</p>
+    <div class="code-example">
+      <p><strong>Example:</strong></p>
+      <pre><code id="code-9">
+.example-paragraph {
+  color:green;
+  filter: saturate(10%);
+}
+  </code></pre>
+      <button class="sandbox-button" onclick="toggleCodeExecution(9)">Try It</button>
+      <div id="sandbox-output-9" class="sandbox-output"></div>
+    </div>
+
+    <div id="example-9" style="display: none;">
+      <p class="example-paragraph">This is an example paragraph with a saturate effect.</p>
+    </div>
+
+
+
+    <h1 id="fonts">Fonts</h1>
+
+    <h3>Font Size</h3>
+    <p>Change the font size:</p>
+    <div class="code-example">
+      <p><strong>Example:</strong></p>
+      <pre><code id="code-12">
+.font-example {
+  font-size: 24px;
+}
+  </code></pre>
+      <button class="sandbox-button" onclick="toggleCodeExecution(12)">Try It</button>
+      <div id="sandbox-output-12" class="sandbox-output"></div>
+    </div>
+
+    <div id="example-12" style="display: none;">
+      <p class="font-example">This is an example paragraph with a custom font size.</p>
+    </div>
+
+    <h3>Font Family</h3>
+    <p>Change the font family:</p>
+    <div class="code-example">
+      <p><strong>Example:</strong></p>
+      <pre><code id="code-13">
+.font-example {
+  font-family: Arial, sans-serif;
+}
+  </code></pre>
+      <button class="sandbox-button" onclick="toggleCodeExecution(13)">Try It</button>
+      <div id="sandbox-output-13" class="sandbox-output"></div>
+    </div>
+
+    <div id="example-13" style="display: none;">
+      <p class="font-example">This is an example paragraph with a custom font family.</p>
+    </div>
+
+
+
+    <h1 id="images">Images</h1>
+
+    <h3>Image Filter - Brightness</h3>
+    <p>Adjust the brightness of an image:</p>
+    <div class="code-example">
+      <p><strong>Example:</strong></p>
+      <pre><code id="code-16">
+.image-example {
+  filter: brightness(70%);
+}
+  </code></pre>
+      <button class="sandbox-button" onclick="toggleCodeExecution(16)">Try It</button>
+      <div id="sandbox-output-16" class="sandbox-output"></div>
+    </div>
+
+    <div id="example-16" style="display: none;">
+      <img class="image-example" src="/image.jpg" alt="Example Image">
+    </div>
+
+    <h3>Image Filter - Grayscale</h3>
+    <p>Convert an image to grayscale:</p>
+    <div class="code-example">
+      <p><strong>Example:</strong></p>
+      <pre><code id="code-17">
+.image-example {
+  filter: grayscale(100%);
+}
+  </code></pre>
+      <button class="sandbox-button" onclick="toggleCodeExecution(17)">Try It</button>
+      <div id="sandbox-output-17" class="sandbox-output"></div>
+    </div>
+
+    <div id="example-17" style="display: none;">
+      <img class="image-example" src="/image.jpg" alt="Example Image">
+    </div>
+
+    <h1 id="list">List Styles</h1>
+
+    <h3>List Style</h3>
+    <p>Change the style of list markers:</p>
+    <div class="code-example">
+      <p><strong>Example:</strong></p>
+      <pre><code id="code-23">
+.list-style {
+  list-style-type: disc;
+}
+
+.list-style-square {
+  list-style-type: square;
+}
+
+.list-style-decimal {
+  list-style-type: decimal;
+}
+  </code></pre>
+      <button class="sandbox-button" onclick="toggleCodeExecution(23)">Try It</button>
+      <div id="sandbox-output-23" class="sandbox-output"></div>
+    </div>
+
+    <div id="example-23" style="display: none;">
+      <ul class="list-style">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+      </ul>
+      <ul class="list-style-square">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+      </ul>
+      <ol class="list-style-decimal">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+      </ol>
+    </div>
+
+
+    <h1 id="media">Media Queries</h1>
+
+    <h3>List Media Queries</h3>
+    <p>Change the list style based on screen size:</p>
+    <div class="code-example">
+      <p><strong>Example:</strong></p>
+      <pre><code id="code-24">
+@media screen and (max-width: 700px) {
+  .list-media-query {
+    list-style-type: square;
+  }
+}
+
+@media screen and (min-width: 701px) {
+  .list-media-query {
+    list-style-type: decimal;
+  }
+}
+  </code></pre>
+      <button class="sandbox-button" onclick="toggleCodeExecution(24)">Try It</button>
+      <div id="sandbox-output-24" class="sandbox-output"></div>
+    </div>
+
+    <div id="example-24" style="display: none;">
+      <ul class="list-media-query">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+      </ul>
+    </div>
+
+
+  </main>
+</body>
+
+</html>
