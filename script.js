@@ -28,19 +28,19 @@ function toggleCodeExecution(codeId) {
 
     if (codeId === 2) {
       exampleHTML =
-        '<div id="example-div" class="animated bounce">This is an example div.</div>';
+        '<div id="example-div" class="animated bounce" style="color:white;">This is an example div.</div>';
     } else if (codeId === 3) {
       exampleHTML =
-        '<div id="example-div" class="animated rotate">This is an example div.</div>';
+        '<div id="example-div" class="animated rotate" style="color:white;">This is an example div.</div>';
     } else if (codeId === 7) {
       exampleHTML =
-        '<p class="example-paragraph">This is an example paragraph with a blur effect.</p>';
+        '<p class="example-paragraph" style="color:white;">This is an example paragraph with a blur effect.</p>';
     } else if (codeId === 8) {
       exampleHTML =
-        '<p class="example-paragraph">This is an example paragraph with an opacity effect.</p>';
+        '<p class="example-paragraph" style="color:white;">This is an example paragraph with an opacity effect.</p>';
     } else if (codeId === 9) {
       exampleHTML =
-        '<p class="example-paragraph">This is an example paragraph with a saturate effect.</p>';
+        '<p class="example-paragraph" style="color:limegreen;">This is an example paragraph with a saturate effect.</p>';
     } else if (codeId === 10) {
       exampleHTML =
         '<div class="flex-container"><div class="flex-item">Item 1</div><div class="flex-item">Item 2</div><div class="flex-item">Item 3</div></div>';
@@ -49,16 +49,16 @@ function toggleCodeExecution(codeId) {
         '<div class="flex-container"><div class="flex-item">Item 1</div><div class="flex-item">Item 2</div><div class="flex-item">Item 3</div></div>';
     } else if (codeId === 12) {
       exampleHTML =
-        '<p class="font-example">This is an example paragraph with a custom font size.</p>';
+        '<p class="font-example" style="color:white;">This is an example paragraph with a custom font size.</p>';
     } else if (codeId === 13) {
       exampleHTML =
-        '<p class="font-example">This is an example paragraph with a custom font family.</p>';
+        '<p class="font-example" style="color:white;">This is an example paragraph with a custom font family.</p>';
     } else if (codeId === 14) {
       exampleHTML =
-        '<div class="grid-example"><div>Column 1</div><div>Column 2</div><div>Column 3</div></div>';
+        '<div class="grid-example" style="color:white;"><div>Column 1</div><div>Column 2</div><div>Column 3</div></div>';
     } else if (codeId === 15) {
       exampleHTML =
-        '<div class="grid-example"><div>Row 1</div><div>Row 2</div><div>Row 3</div></div>';
+        '<div class="grid-example" style="color:white;"><div>Row 1</div><div>Row 2</div><div>Row 3</div></div>';
     } else if (codeId === 16) {
       exampleHTML =
         '<img class="image-example" src="/image.jpg" alt="Example Image">';
@@ -82,10 +82,10 @@ function toggleCodeExecution(codeId) {
         '<div class="block-container"><div class="block-item">Item 1</div><div class="block-item">Item 2</div><div class="block-item">Item 3</div></div>';
     } else if (codeId === 23) {
       exampleHTML =
-        '<ul class="list-style"><li>Item 1</li><li>Item 2</li><li>Item 3</li></ul><ul class="list-style-square"><li>Item 1</li><li>Item 2</li><li>Item 3</li></ul><ol class="list-style-decimal"><li>Item 1</li><li>Item 2</li><li>Item 3</li></ol>';
+        '<ul class="list-style" style="color:white;"><li>Item 1</li><li>Item 2</li><li>Item 3</li></ul><ul class="list-style-square" style="color:white;"><li>Item 1</li><li>Item 2</li><li>Item 3</li></ul><ol class="list-style-decimal" style="color:white;"><li>Item 1</li><li>Item 2</li><li>Item 3</li></ol>';
     } else if (codeId === 24) {
       exampleHTML =
-        '<ul class="list-media-query"><li>Item 1</li><li>Item 2</li><li>Item 3</li></ul>';
+        '<ul class="list-media-query" style="color:white;"><li>Item 1</li><li>Item 2</li><li>Item 3</li></ul>';
     }
 
     exampleContent.innerHTML = exampleHTML;
